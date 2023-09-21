@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/bg_morning.jpg);
+  overflow: hidden;
+}
+main article h1,
+main article em,
+main figure .screen,
+main figure .screen em,
+main figure .screen span {
+  color: #fff;
+}
+main.dark article h1,
+main.dark article em,
+main.dark figure .screen,
+main.dark figure .screen em,
+main.dark figure .screen span {
+  color: #555;
+}
+main.morning {
+  background-image: url(../img/bg_morning.jpg);
+}
+main.morning figure {
+  background-image: url(../img/phone_morning.png);
+}
+main.afternoon {
+  background-image: url(../img/bg_afternoon.jpg);
+}
+main.afternoon figure {
+  background-image: url(../img/phone_afternoon.png);
+}
+main.evening {
+  background-image: url(../img/bg_evening.jpg);
+}
+main.evening figure {
+  background-image: url(../img/phone_evening.png);
+}
+main.night {
+  background-image: url(../img/bg_night.jpg);
+}
+main.night figure {
+  background-image: url(../img/phone_night.png);
+}
+main .cl1 {
+  position: absolute;
+  top: -100px;
+  left: 0%;
+  opacity: 0;
+  animation: move 40s linear 20s infinite;
+}
+main .cl2 {
+  position: absolute;
+  top: -50px;
+  left: 0%;
+  opacity: 0;
+  animation: move 40s linear 0s infinite;
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    left: -50%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  100% {
+    left: 80%;
+    opacity: 0;
+  }
+}
+main.dark article h1,
+main.dark article em {
+  color: #fff;
+}
+main article {
+  width: 35vw;
+  position: absolute;
+  top: 60vh;
+  left: 5vw;
+}
+main article h1 {
+  font: 4vmax/1 "orbitron";
+  color: #fff;
+  margin-bottom: 20px;
+}
+main article h1 span {
+  opacity: 0.8;
+}
+main article h1 strong {
+  font-weight: normal;
+  opacity: 1;
+}
+main article em {
+  font: 18px/1.1 "arial";
+  color: #fff;
+  padding-left: 5px;
+  opacity: 0.6;
+}
+main figure {
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  right: -10vw;
+  top: 50%;
+  margin-top: -200px;
+  background-image: url(../img/phone_morning.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+main figure .screen {
+  width: 534px;
+  height: 301px;
+  position: absolute;
+  top: 98px;
+  left: 132px;
+  font: 60px/301px "orbitron";
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+main figure .screen .cl1 {
+  width: 600px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  opacity: 0;
+  animation: move 40s linear 20s infinite;
+}
+main figure .screen .cl2 {
+  width: 700px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  opacity: 0;
+  animation: move 40s linear 0s infinite;
+}
+main figure .screen em {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  font: 20px/1 "orbitron";
+  color: #fff;
+  opacity: 0;
+}
+main figure .screen em.on {
+  opacity: 0.8;
+}
+main figure .screen span {
+  display: inline-block;
+  width: 100px;
+}
+
+.nav {
+  width: 100%;
+  padding: 4vh 5vw;
+  position: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "orbitron";
+  letter-spacing: 2px;
+  color: #fff;
+}
+.nav li {
+  opacity: 0.5;
+}
+.nav li.on {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1600px) {
+  main figure {
+    transform-origin: right center;
+    transform: scale(0.8);
+    margin-top: -200px;
+    right: -15vw;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main article {
+    width: 38vw;
+    top: 60vh;
+  }
+  main figure {
+    transform: scale(0.75);
+  }
+}
+@media screen and (max-width: 1200px) {
+  main article {
+    width: 100%;
+    top: 10vh;
+    left: 0;
+    padding: 10vw;
+  }
+  main article h1 {
+    color: #fff;
+    opacity: 0.7;
+  }
+  main article em {
+    color: #fff;
+  }
+  main.dark article h1,
+  main.dark article em {
+    color: #555;
+  }
+  main figure {
+    margin-top: -200px;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 800px) {
+  main article {
+    top: 18vh;
+    padding: 10vw;
+  }
+  main article h1 {
+    font-size: 8vw;
+  }
+  main figure {
+    margin-top: -200px;
+    transform: scale(0.6);
+    right: -20vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
